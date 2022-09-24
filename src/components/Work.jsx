@@ -52,9 +52,6 @@ const Work = () => {
               <span>{work.name}</span>
               <div className="hoverCard-Buttons">
                 <a href={work.code}>
-                  <button>Demo</button>
-                </a>
-                <a href={work.code}>
                   <button>Code</button>
                 </a>
               </div>
