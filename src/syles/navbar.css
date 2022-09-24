@@ -112,17 +112,18 @@
     color: white;
   }
 
-  .burger-links ul a span {
-    color: #64ffda;
-  }
-
   .burger-links ul a {
     padding: 0 0px;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     color: #ffffff;
-    transition: 0.3s ease;
+    cursor: pointer;
+    transition: 0.3s all ease;
+  }
+
+  .burger-links ul a:hover {
+    transform: translateX(10px);
   }
 
   .burger-links ul a:hover,
