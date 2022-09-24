@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import "../syles/homePage.css";
@@ -58,7 +59,15 @@ const HomePage = () => {
       <div className="website-link">
         <ul>
           <li>
-            <a href="https://github.com/omercerkezi">omercerkezi@gmail.com</a>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-80}
+              duration={500}
+            >
+              omercerkezi@gmail.com
+            </Link>
           </li>
           <li className="line-right"></li>
         </ul>

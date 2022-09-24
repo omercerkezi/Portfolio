@@ -25,8 +25,8 @@ const Skills = () => {
       <h1>Skills</h1>
       <p>These are the technologies I've worked with</p>
       <div className="skills-body">
-        {mySkills.map((skill) => (
-          <div className="technology">
+        {mySkills.map((skill, index) => (
+          <div className="technology" key={index}>
             <div className="test">
               <img src={skill.logo} alt="logo" />
               <p>{skill.name}</p>

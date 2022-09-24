@@ -118,6 +118,18 @@
   background-color: #64ffdb27;
 }
 
+@media (max-width: 1105px) {
+  .contact form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact form {
+    width: 80%;
+  }
+}
+
 @media (max-width: 400px) {
   .submitButton {
     width: 80%;

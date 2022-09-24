@@ -45,8 +45,8 @@ const Work = () => {
       <h1>Work</h1>
       <p>Check out some of my recent work</p>
       <div className="work-body">
-        {myWork.map((work) => (
-          <div className="card">
+        {myWork.map((work, index) => (
+          <div className="card" key={index}>
             <img src={work.logo} alt="workImage" />
             <div className="hoverCard">
               <span>{work.name}</span>
