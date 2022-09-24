@@ -1,0 +1,172 @@
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0 5%;
+  padding: 0 5%;
+}
+
+.skills h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+  color: #ccd6f6;
+}
+
+.skills h1::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: rgb(100, 255, 218);
+}
+
+.skills p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #ccd6f6;
+}
+
+.skills-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 40px;
+}
+
+.technology {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7px;
+  margin: 20px;
+  background: rgba(100, 255, 218, 0.3);
+  border-radius: 7px;
+  box-shadow: rgba(100, 100, 100, 0.7) 2px 5px 15px;
+  transition: 0.4s all ease-out;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.test {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.technology::before {
+  content: "";
+  position: absolute;
+  top: -70px;
+  left: 30px;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 4s linear infinite;
+}
+
+.technology::after {
+  position: absolute;
+  content: "";
+  inset: 3px;
+  border-radius: 5px;
+  background-color: #04243c;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.technology:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.technology p {
+  margin-top: 5px;
+}
+
+@media (max-width: 1105px) {
+  .skills-body {
+    gap: 20px;
+  }
+
+  .technology {
+    padding: 5px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills h1 {
+    margin-bottom: 8px;
+    font-size: 36px;
+  }
+
+  .skills p {
+    margin: 0 0 18px 0;
+    font-size: 14px;
+  }
+
+  .skills-body {
+    gap: 15px;
+  }
+
+  .technology {
+    padding: 3px;
+    margin: 7px;
+  }
+
+  .technology:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 400px) {
+  .skills {
+    margin: 0 2%;
+    padding: 0 2%;
+  }
+
+  .skills h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+  }
+
+  .skills h1::after {
+    height: 2px;
+  }
+
+  .skills p {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+  }
+
+  .skills-body {
+    gap: 10px;
+  }
+
+  .technology {
+    padding: 1px;
+    margin: 5px;
+  }
+
+  .test {
+    padding: 5px;
+  }
+
+  .technology:hover {
+    transform: scale(1.05);
+  }
+}

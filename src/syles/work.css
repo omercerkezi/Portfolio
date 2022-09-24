@@ -1,0 +1,185 @@
+.work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 3%;
+}
+
+.work h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+  color: #ccd6f6;
+}
+
+.work h1::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #64ffda;
+}
+
+.work p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #ccd6f6;
+}
+
+.work-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 100, 0.35) 2px 5px 15px;
+  transition: 0.4s all ease-out;
+}
+
+.card img {
+  object-fit: contain;
+  width: 270px;
+  height: 270px;
+}
+
+.hoverCard {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+}
+
+.card:hover .hoverCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 40px;
+  border-radius: 10px;
+  background-color: rgba(4, 36, 60, 0.8);
+}
+
+.hoverCard span {
+  color: white;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.hoverCard-Buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hoverCard-Buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid #64ffda;
+  cursor: pointer;
+  transition: 0.4s all ease-out;
+}
+
+.hoverCard-Buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  scale: 1.1;
+}
+
+@media (max-width: 1105px) {
+  .card img {
+    object-fit: contain;
+    width: 220px;
+    height: 220px;
+  }
+
+  .card:hover .hoverCard {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card img {
+    object-fit: contain;
+    width: 150px;
+    height: 150px;
+  }
+
+  .card:hover .hoverCard {
+    gap: 10px;
+  }
+
+  .work-body {
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .work h1 {
+    margin-bottom: 10px;
+    font-size: 32px;
+  }
+
+  .work h1::after {
+    height: 2px;
+  }
+
+  .work p {
+    margin: 0 0 10px 0;
+    font-size: 12px;
+  }
+
+  .hoverCard span {
+    font-size: 20px;
+  }
+
+  .hoverCard-Buttons {
+    gap: 10px;
+  }
+
+  .hoverCard-Buttons button {
+    padding: 5px 14px;
+    font-size: 10px;
+  }
+
+  .hoverCard-Buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (max-width: 400px) {
+  .card img {
+    object-fit: contain;
+    width: 120px;
+    height: 120px;
+  }
+
+  .hoverCard span {
+    font-size: 14px;
+  }
+
+  .hoverCard-Buttons button {
+    padding: 3px 10px;
+    font-size: 8px;
+    color: white;
+  }
+
+  .hoverCard-Buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}

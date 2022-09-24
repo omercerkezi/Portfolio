@@ -1,0 +1,126 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  margin: 20% 0 5% 0;
+  padding: 0 5%;
+}
+
+.contact h1 {
+  margin-bottom: 10px;
+  font-size: 40px;
+  color: #ccd6f6;
+}
+
+.contact h1::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #64ffda;
+}
+
+.contact p {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #ccd6f6;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 50%;
+  height: 50px;
+}
+
+.name-class {
+  position: relative;
+}
+
+.name-class input {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0 0 0;
+  color: white;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.name-class label {
+  color: white;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  pointer-events: none;
+  border-bottom: 1px solid white;
+  overflow: hidden;
+}
+
+.name-class label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid #64ffda;
+  transform: translateX(-101%);
+  transition: transform 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.name-class input:focus + label .content-name,
+.name-class input:valid + label .content-name {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #64ffda;
+}
+
+.name-class input:focus + label::after,
+.name-class input:valid + label::after {
+  transform: translateX(0%);
+}
+
+.message-class textarea {
+  resize: none;
+  outline: none;
+  border: none;
+  width: calc(100% - 20px);
+  min-height: 100px;
+  padding: 10px;
+}
+
+.submitButton {
+  width: 60%;
+  margin: 0 auto;
+  padding: 16px 24px;
+  font-size: 16px;
+  color: #64ffda;
+  background-color: transparent;
+  border: 2px solid #64ffda;
+  cursor: pointer;
+  transition: 0.4s all ease-out;
+}
+
+.submitButton:hover {
+  background-color: #64ffdb27;
+}
+
+@media (max-width: 400px) {
+  .submitButton {
+    width: 80%;
+    font-size: 14px;
+  }
+}

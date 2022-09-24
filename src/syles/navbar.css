@@ -1,0 +1,138 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #04243c;
+  box-shadow: 0 5px 15px rgba(165, 161, 161, 0.06);
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding-right: 20px;
+}
+
+.nav-links ul a {
+  padding: 0 0px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ccd6f6;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-links ul a:hover,
+.nav-links ul a.active {
+  color: #64ffda;
+}
+
+.nav-menuBtn {
+  display: none;
+}
+
+.nav-hamburgerClicked {
+  display: none;
+}
+
+.nav-hamburgerUnclicked {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-menuBtn {
+    display: flex;
+    cursor: pointer;
+    color: #64ffda;
+  }
+
+  .nav-hamburgerClicked {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 50%;
+    background-color: #123149;
+    box-shadow: -10px 0px 30px -15px rgba(2, 12, 27, 0.7);
+  }
+
+  .burger-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(18, 49, 73, 0.1);
+    backdrop-filter: blur(3px);
+  }
+
+  .burger-exitBtn {
+    margin-top: 30px;
+    margin-left: 77%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #64ffda;
+  }
+
+  .burger-exitBtn:hover {
+    color: #b1fdeb;
+  }
+
+  .burger-links {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .burger-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    color: white;
+  }
+
+  .burger-links ul a span {
+    color: #64ffda;
+  }
+
+  .burger-links ul a {
+    padding: 0 0px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    transition: 0.3s ease;
+  }
+
+  .burger-links ul a:hover,
+  .burger-links ul a.active {
+    color: #64ffda;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-hamburgerClicked {
+    width: 70%;
+  }
+}
