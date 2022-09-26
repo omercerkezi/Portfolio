@@ -154,7 +154,7 @@
   }
 
   .skills-body {
-    gap: 10px;
+    gap: 5px;
   }
 
   .technology {
@@ -163,10 +163,15 @@
   }
 
   .test {
-    padding: 5px;
+    padding: 2px;
   }
 
   .technology:hover {
     transform: scale(1.05);
+  }
+
+  .test img {
+    width: 80px;
+    height: 80px;
   }
 }

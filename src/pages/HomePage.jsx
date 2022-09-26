@@ -15,7 +15,6 @@ import {
   batch,
   Fade,
   MoveIn,
-  MoveOut,
   ZoomIn,
 } from "react-scroll-motion";
 
@@ -44,7 +43,7 @@ const HomePage = () => {
             </Animator>
           </ScrollPage>
           <ScrollPage page={1}>
-            <Animator animation={batch(MoveIn(1000, 0), MoveOut(1000, 0))}>
+            <Animator animation={batch(MoveIn(1000, 0), Fade())}>
               <Skills />
             </Animator>
           </ScrollPage>
